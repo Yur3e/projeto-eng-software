@@ -1,0 +1,113 @@
+/* ==== RESET ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==== FUNDO ==== */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #003366, #0059b3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ==== CAIXA DE FORMULÁRIO ==== */
+.form-box {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+.form-box h1 {
+    color: #003366;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-box h2 {
+    color: #0059b3;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* ==== CAMPOS DO FORM ==== */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #0059b3;
+    outline: none;
+    box-shadow: 0 0 5px #0059b3;
+}
+
+/* ==== BOTÕES ==== */
+button {
+    background: #0059b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #003366;
+}
+
+/* ==== LINKS ==== */
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #0059b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==== BOTÃO DE SUPORTE ==== */
+.suporte-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.suporte-btn:hover {
+    background: #1e7e34;
+    transform: scale(1.05);
+}
