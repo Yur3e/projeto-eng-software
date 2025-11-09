@@ -463,7 +463,7 @@ a:hover {
     background-color: #d4edda;
 }
 
-.ticket-form {
+.ticketchat {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -473,20 +473,20 @@ a:hover {
     margin-top: 10px;
 }
 
-.ticket-form label {
+.ticketchat label {
     font-weight: bold;
     font-size: 14px;
 }
 
-.ticket-form input,
-.ticket-form select,
-.ticket-form textarea {
+.ticketchat input,
+.ticketchat select,
+.ticketchat textarea {
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 6px;
 }
 
-.ticket-form button {
+.ticketchat button {
     background-color: #28a745;
     color: white;
     border: none;
@@ -495,6 +495,6 @@ a:hover {
     cursor: pointer;
 }
 
-.ticket-form button:hover {
+.ticketchat button:hover {
     background-color: #218838;
 }

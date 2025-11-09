@@ -95,7 +95,7 @@ function handleOption(option) {
 // === FORMULÁRIO DE ABERTURA DE TICKET ===
 function showTicketForm() {
     const formDiv = document.createElement("div");
-    formDiv.classList.add("ticket-form");
+    formDiv.classList.add("ticketchat");
     formDiv.innerHTML = `
         <label>Nome completo:</label>
         <input type="text" id="ticketNome" placeholder="Digite seu nome completo">
@@ -133,7 +133,7 @@ function showTicketForm() {
 // === FORMULÁRIO DE CONSULTA ===
 function showConsultaForm() {
     const formDiv = document.createElement("div");
-    formDiv.classList.add("ticket-form");
+    formDiv.classList.add("ticketchat");
     formDiv.innerHTML = `
         <label>Nome completo:</label>
         <input type="text" id="consultaNome" placeholder="Digite seu nome completo">
