@@ -1,4 +1,3 @@
-<!-- Tela principal -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +21,21 @@
         </div>
     </div>
 
-    <button class="suporte-btn">💬 Suporte</button>
+    <!-- Botão de suporte -->
+    <button class="suporte-btn" id="suporteBtn">💬 Suporte</button>
 
+    <!-- Caixa de chat -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">Suporte UEPB</div>
+        <div class="chat-body" id="chatBody">
+            <div class="bot-msg">👋 Olá! Seja bem-vindo ao suporte da UEPB.<br>Como posso te ajudar hoje?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
