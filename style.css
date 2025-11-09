@@ -111,3 +111,160 @@ a:hover {
     background: #1e7e34;
     transform: scale(1.05);
 }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-box input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-box button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Botão de suporte */
+.suporte-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.suporte-btn:hover {
+    background-color: #218838;
+}
+
+/* Caixa de chat */
+.chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Cabeçalho do chat */
+.chat-header {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Corpo do chat */
+.chat-body {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Mensagens */
+.bot-msg {
+    background-color: #e9ecef;
+    padding: 10px 14px;
+    border-radius: 10px;
+    align-self: flex-start;
+    max-width: 85%;
+}
+
+.user-msg {
+    background-color: #d1f7d1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    align-self: flex-end;
+    max-width: 85%;
+}
+
+/* Rodapé */
+.chat-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+    outline: none;
+}
+
+.chat-footer button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #218838;
+}
+
+/* Opções de suporte */
+.option {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    background-color: #d4edda;
+}
+
