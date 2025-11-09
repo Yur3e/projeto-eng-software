@@ -1,0 +1,73 @@
+<!-- Tela pós-login -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário - Universidade UEPB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard">
+
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Área do Usuário</h1>
+                <p>Selecione uma das opções abaixo para continuar.</p>
+            </div>
+
+            <div class="user-menu-wrapper">
+                <button id="userMenuToggle" class="user-menu-toggle" aria-expanded="false" aria-label="Menu do Usuário">
+                    <img src="user.png" alt="" class="user-icon">
+                </button>
+                <div id="userMenu" class="user-menu" hidden>
+                    <button class="menu-item">Exibir informações</button>
+                    <button class="menu-item danger">Sair</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="quick-actions">
+            <button class="action-card">
+                Manual do usuário
+                <span>Consulte orientações e perguntas frequentes.</span>
+            </button>
+
+            <button class="action-card">
+                Abrir ticket
+                <span>Registre um chamado para suporte institucional.</span>
+            </button>
+
+            <button class="action-card">
+                Ver tickets abertos
+                <span>Consulte o andamento dos seus chamados.</span>
+            </button>
+        </section>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('userMenuToggle');
+        const menu = document.getElementById('userMenu');
+
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            const nextState = !isExpanded;
+            menuToggle.setAttribute('aria-expanded', String(nextState));
+            menu.hidden = !nextState;
+        });
+
+        document.addEventListener('click', () => {
+            if (menuToggle.getAttribute('aria-expanded') === 'true') {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menu.hidden = true;
+            }
+        });
+
+        menu.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    </script>
+
+</body>
+</html>
