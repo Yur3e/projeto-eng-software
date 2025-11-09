@@ -1,0 +1,65 @@
+<!-- Tela de abertura de ticket -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir Ticket - Universidade UEPB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="ticket-page">
+
+    <div class="ticket-container">
+        <header class="ticket-header">
+            <div>
+                <p class="breadcrumb">Tickets / Novo</p>
+                <h1>Abrir novo ticket</h1>
+                <p>Compartilhe o problema com detalhes para acelerar o atendimento.</p>
+            </div>
+            <a href="area-usuario.html" class="link-voltar">Voltar para a área do usuário</a>
+        </header>
+
+        <form class="ticket-form">
+            <section class="form-card">
+                <label for="titulo">Título (breve descrição do ticket)</label>
+                <input type="text" id="titulo" placeholder="Ex.: Falha no acesso ao portal acadêmico" required>
+            </section>
+
+            <section class="form-card">
+                <label for="setor">Setor responsável</label>
+                <div class="select-wrapper">
+                    <select id="setor" required>
+                        <option value="" disabled selected>Selecione um setor</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="secretaria">Secretaria Acadêmica</option>
+                        <option value="biblioteca">Biblioteca</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="form-card">
+                <label for="descricao">Descrição detalhada</label>
+                <textarea id="descricao" rows="8" placeholder="Liste sintomas, passos para reproduzir, mensagens ou anexos relevantes..." required></textarea>
+            </section>
+
+            <section class="form-card attachments">
+                <div>
+                    <label>Anexos</label>
+                    <p>Adicione capturas de tela ou documentos que ajudem a entender o problema.</p>
+                </div>
+                <label class="upload-btn">
+                    <input type="file" multiple hidden>
+                    Adicionar anexos
+                </label>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="primary">Enviar ticket</button>
+                <button type="button" class="ghost">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
