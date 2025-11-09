@@ -528,6 +528,50 @@ body.ticket-page {
     gap: 20px;
 }
 
+.ticket-legend {
+    border: 1px solid rgba(0, 51, 102, 0.12);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background: #f7fbff;
+}
+
+.ticket-legend h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #003366;
+}
+
+.ticket-legend ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    color: #4d4d4d;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.legend-dot.status-new {
+    background: #d93025;
+}
+
+.legend-dot.status-progress {
+    background: #f4b400;
+}
+
+.legend-dot.status-done {
+    background: #0f9d58;
+}
+
 .ticket-card {
     border-radius: 16px;
     border: 1px solid rgba(0, 51, 102, 0.12);
