@@ -1,0 +1,96 @@
+<!-- Tela de tickets abertos -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets Abertos - Universidade UEPB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="tickets-page">
+
+    <div class="tickets-container">
+        <header class="ticket-header">
+            <div>
+                <p class="breadcrumb">Tickets / Aberto</p>
+                <h1>Tickets do usuário</h1>
+                <p>Acompanhe o andamento dos seus chamados e mantenha-os atualizados.</p>
+            </div>
+            <a href="area-usuario.html" class="link-voltar">Voltar para a área do usuário</a>
+        </header>
+
+        <section class="ticket-list">
+            <article class="ticket-card status-new">
+                <div class="ticket-info">
+                    <div>
+                        <h2>Falha no acesso ao portal</h2>
+                        <p>Aberto há 2 horas · Setor: Tecnologia da Informação</p>
+                    </div>
+                    <button class="toggle-details" data-target="ticket-1">Detalhes</button>
+                </div>
+
+                <div id="ticket-1" class="ticket-details" hidden>
+                    <p>Erro 500 ao tentar acessar o portal acadêmico desde a manhã.</p>
+                    <div class="ticket-actions">
+                        <button class="ghost">Editar ticket</button>
+                        <button class="danger">Excluir ticket</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="ticket-card status-progress">
+                <div class="ticket-info">
+                    <div>
+                        <h2>Problema na biblioteca virtual</h2>
+                        <p>Atualizado há 1 dia · Setor: Biblioteca</p>
+                    </div>
+                    <button class="toggle-details" data-target="ticket-2">Detalhes</button>
+                </div>
+
+                <div id="ticket-2" class="ticket-details" hidden>
+                    <p>Não é possível baixar livros em PDF. Equipe já em análise.</p>
+                    <div class="ticket-actions readonly">
+                        <button class="ghost" disabled>Editar ticket</button>
+                        <span class="hint">Edição disponível apenas para tickets não lidos.</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="ticket-card status-done">
+                <div class="ticket-info">
+                    <div>
+                        <h2>Atualização cadastral</h2>
+                        <p>Concluído há 3 dias · Setor: Secretaria Acadêmica</p>
+                    </div>
+                    <button class="toggle-details" data-target="ticket-3">Detalhes</button>
+                </div>
+
+                <div id="ticket-3" class="ticket-details" hidden>
+                    <p>Dados do curso e telefone foram atualizados com sucesso.</p>
+                    <div class="ticket-actions readonly">
+                        <button class="ghost" disabled>Editar ticket</button>
+                        <span class="hint">Tickets concluídos não podem ser alterados.</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-details').forEach((button) => {
+            button.addEventListener('click', () => {
+                const target = document.getElementById(button.dataset.target);
+                const isHidden = target.hasAttribute('hidden');
+                if (isHidden) {
+                    target.removeAttribute('hidden');
+                    button.textContent = 'Recolher';
+                } else {
+                    target.setAttribute('hidden', '');
+                    button.textContent = 'Detalhes';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
