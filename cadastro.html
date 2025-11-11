@@ -13,18 +13,64 @@
         <div class="form-box">
             <h1>Portal Universitário</h1>
             <h2>Cadastro</h2>
-            <form>
+
+            <form id="cadastroForm">
+
                 <input type="text" placeholder="Nome completo" required>
-                <input type="email" placeholder="E-mail institucional" required>
+                <input type="text" placeholder="CPF" required>
+                <input type="date" required>
+
+                <!-- Linha sexo -->
+                <div class="linha-form">
+                    <select id="sexo" required>
+                        <option value="">Sexo</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Linha classificação -->
+                <div class="linha-form">
+                    <select id="classificacao" required>
+                        <option value="">Classificação</option>
+                        <option value="aluno">Aluno</option>
+                        <option value="professor">Professor</option>
+                        <option value="terceirizado">Terceirizado</option>
+                    </select>
+                </div>
+
+                <!-- Matrícula (somente aluno/professor) -->
+                <div id="matriculaBox" class="campo-extra" style="display:none;">
+                    <input type="text" placeholder="Matrícula" id="matricula">
+                </div>
+
+                <!-- Email institucional (somente aluno/professor) -->
+                <div id="emailInstBox" class="campo-extra" style="display:none;">
+                    <input type="email" placeholder="E-mail institucional" id="emailInst">
+                </div>
+
+                <!-- Email comum (terceirizado) -->
+                <div id="emailComumBox" class="campo-extra" style="display:none;">
+                    <input type="email" placeholder="E-mail" id="emailComum">
+                </div>
+
+                <!-- Telefone (terceirizado) -->
+                <div id="telefoneBox" class="campo-extra" style="display:none;">
+                    <input type="tel" placeholder="Telefone" id="telefone">
+                </div>
+
                 <input type="password" placeholder="Senha" required>
                 <input type="password" placeholder="Confirmar senha" required>
-                <button type="submit">Cadastrar</button>
+
+                <button type="submit">Criar login</button>
+
                 <p>Já possui conta? <a href="index.html">Entrar</a></p>
+
             </form>
         </div>
     </div>
 
-    <button class="suporte-btn">💬 Suporte</button>
-
+    <script src="script.js"></script>
 </body>
 </html>
